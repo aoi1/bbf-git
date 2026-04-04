@@ -4,11 +4,11 @@ on: [push]
 jobs:
   get-info:
     runs-on: ubuntu-latest
-  steps:
-    - run: echo "ブランチ名は ${{ github.ref }}、リポジトリ名は ${{ github.repository }} です。"
-    - name: checkout repository
-      uses: actions/checkout@v4
-    - run: echo "リポジトリ ${{ github.repository }} がランナー上にクローンされました。"
-    - name: list files
-      run: |
-        ls ${{ github.workspace }}
+    steps:
+      - run: echo "ブランチ名は ${{ github.ref }}、リポジトリ名は ${{ github.repository }} です。"
+      - name: checkout repository
+        uses: actions/checkout@v4
+      - run: echo "リポジトリ ${{ github.repository }} がランナー上にクローンされました。"
+      - name: list files
+        run: |
+          ls ${{ github.workspace }}
